@@ -1,43 +1,50 @@
 header {
     background-color: #8ea6d1;
     color: white;
-    padding: 30px 80px;
+    padding: 40px 80px;
     text-align: center;
-    font-size: 2rem; 
-    border-bottom: 3px solid #002366; 
+    font-size: 2.5rem; 
+    border-bottom: 4px solid #002366; 
     width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 footer {
     background-color: #e4a3d4;
     color: white;
     text-align: center;
-    padding: 25px 80px; 
+    padding: 20px 80px; 
     font-size: 1.2rem; 
+    border-top: 3px solid #8ea6d1;
     width: 100%;
+    border-radius: 8px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 30px; 
-    padding: 20px 80px; 
+    gap: 40px; 
+    padding: 20px 60px; 
     background-color: #d7e3f3;
-    border-bottom: 3px solid #8ea6d1;
-    width: 100%;
+    border-bottom: 4px solid #8ea6d1;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 a {
     text-decoration: none;
-    padding: 15px 30px; 
+    padding: 12px 25px; 
     color: #002366;
-    border-radius: 12px; 
+    border-radius: 8px; 
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
+    font-size: 1.2rem;
 }
 
 a:hover {
     background-color: #c9d6e7;
+    color: #002366;
 }
 
 a.active {
@@ -48,11 +55,64 @@ a.active {
 
 main {
     background-color: #f0f4fa;
-    padding: 60px 100px; 
-    border-radius: 15px;
+    padding: 50px 80px; 
+    border-radius: 12px;
     margin: 30px auto; 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
-    font-size: 1.4rem; 
-    width: 90%; 
-    max-width: 1500px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+    font-size: 1.3rem; 
+    width: 95%; 
+    max-width: 1400px; 
+    line-height: 1.8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+th {
+    background-color: #8ea6d1;
+    color: white;
+    border-bottom: 4px solid #002366;
+}
+
+tr:nth-child(even) {
+    background-color: #f7f9fc;
+}
+
+.status-aprobata {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
+
+.status-respinsa {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+}
+
+.view-button {
+    background-color: #002366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.view-button:hover {
+    background-color: #8ea6d1;
 }
