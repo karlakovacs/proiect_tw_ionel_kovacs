@@ -1,118 +1,53 @@
 header {
-    background-color: #8ea6d1;
+    background-color: #8ea6d1; 
     color: white;
-    padding: 40px 80px;
+    padding: 20px;
     text-align: center;
-    font-size: 2.5rem; 
-    border-bottom: 4px solid #002366; 
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    font-size: 1.8rem;
+    border-bottom: 2px solid #002366;
 }
 
 footer {
     background-color: #e4a3d4;
     color: white;
     text-align: center;
-    padding: 20px 80px; 
-    font-size: 1.2rem; 
-    border-top: 3px solid #8ea6d1;
-    width: 100%;
-    border-radius: 8px;
+    padding: 20px;
+    font-size: 1rem;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 40px; 
-    padding: 20px 60px; 
+    gap: 20px;
+    padding: 15px;
     background-color: #d7e3f3;
-    border-bottom: 4px solid #8ea6d1;
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #8ea6d1;
 }
 
 a {
     text-decoration: none;
-    padding: 12px 25px; 
+    padding: 10px 15px;
     color: #002366;
-    border-radius: 8px; 
+    border-radius: 8px;
     background-color: #ffffff;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); 
-    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 a:hover {
-    background-color: #c9d6e7;
-    color: #002366;
+    background-color: #c9d6e7; 
 }
 
 a.active {
     background-color: #b0c4de;
     color: white;
-    border: 2px solid #0048ba; 
+    border: 1px solid #0048ba;
 }
 
 main {
     background-color: #f0f4fa;
-    padding: 50px 80px; 
-    border-radius: 12px;
-    margin: 30px auto; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
-    font-size: 1.3rem; 
-    width: 95%; 
-    max-width: 1400px; 
-    line-height: 1.8;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background-color: #ffffff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-th, td {
-    padding: 15px 20px;
-    text-align: left;
-    font-size: 1.1rem;
-}
-
-th {
-    background-color: #8ea6d1;
-    color: white;
-    border-bottom: 4px solid #002366;
-}
-
-tr:nth-child(even) {
-    background-color: #f7f9fc;
-}
-
-.status-aprobata {
-    background-color: #d4edda;
-    color: #155724;
-    font-weight: bold;
-}
-
-.status-respinsa {
-    background-color: #f8d7da;
-    color: #721c24;
-    font-weight: bold;
-}
-
-.view-button {
-    background-color: #002366;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
-
-.view-button:hover {
-    background-color: #8ea6d1;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
 }
