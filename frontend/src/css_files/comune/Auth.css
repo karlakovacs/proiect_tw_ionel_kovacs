@@ -1,0 +1,31 @@
+.Auth {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+.Auth h2 {
+    color: #002366;
+    margin-bottom: 20px;
+}
+.Auth input, .Auth select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.Auth button {
+    width: 100%;
+    background-color: #002366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Auth button:hover {
+    background-color: #0048ba;
+}
