@@ -27,19 +27,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.raw({ type: "application/pdf" }));
 
 // gestionare fisiere
-app.use("/api", FileRouter);
+app.use(FileRouter);
 
 // gestionare baza de date
 InitDB();
-app.use("/api", DBRouter);
-app.use("/api", FacultateRouter);
-app.use("/api", UtilizatorRouter);
-app.use("/api", StudentRouter);
-app.use("/api", ProfesorRouter);
-app.use("/api", SesiuneRouter);
-app.use("/api", CerereRouter);
-app.use("/api", CerereFinalaRouter);
+app.use(DBRouter);
+app.use(FacultateRouter);
+app.use(UtilizatorRouter);
+app.use(StudentRouter);
+app.use(ProfesorRouter);
+app.use(SesiuneRouter);
+app.use(CerereRouter);
+app.use(CerereFinalaRouter);
 
-let port = process.env.PORT || 8001;
-app.listen(port);
-console.log("API is runnning at port " + port);
+export default app;
