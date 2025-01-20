@@ -1,0 +1,30 @@
+.nav-link {
+    text-decoration: none;
+    color: black;
+    margin: 0px 10px 5px 0px;
+}
+
+.nav-link:hover {
+    color: rgb(180, 26, 160);
+}
+
+.nav-link.active {
+    color: #a70241;
+    border-bottom: 2px solid #a70241;
+}
+
+/* status cerere */
+.respinsa {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.in-asteptare {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.aprobata {
+    background-color: #d4edda;
+    color: #155724;
+}

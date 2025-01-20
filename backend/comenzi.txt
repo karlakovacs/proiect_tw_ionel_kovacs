@@ -1,0 +1,8 @@
+-> SECVENTA DE START:
+pornire BD ->
+Win + R -> services.msc -> postgres -> Start
+SAU
+psql -U postgres
+
+npm install
+npm start
