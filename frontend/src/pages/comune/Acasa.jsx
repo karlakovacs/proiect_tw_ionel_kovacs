@@ -1,4 +1,4 @@
-import 'frontend/src/css_files/comune/Acasa.css';
+import '../../css_files/comune/Acasa.css';
 const Acasa = () => {
     return (
         <div>
