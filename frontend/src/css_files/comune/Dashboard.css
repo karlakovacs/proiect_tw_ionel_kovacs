@@ -48,11 +48,11 @@ a.active {
 
 main {
     background-color: #f0f4fa;
-    padding: 40px 80px;
+    padding: 40px 60px; 
     border-radius: 10px;
     margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.2rem;
-    width: 50%; 
-    max-width: none; 
+    width: 90%; 
+    max-width: 1600px; 
 }
