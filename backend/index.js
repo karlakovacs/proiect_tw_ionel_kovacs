@@ -15,7 +15,7 @@ import CerereFinalaRouter from './src/Routers/CerereFinalaRouter.js';
 env.config();
 
 let app = express();
-app.use(cors({ origin: `http://localhost:${process.env.REACT_PORT}` }));
+app.use(cors({ origin: process.env.REACT_URL }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
