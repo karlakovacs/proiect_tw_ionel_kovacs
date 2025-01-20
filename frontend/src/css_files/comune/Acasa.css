@@ -1,11 +1,11 @@
-.Acasa {
+body {
     text-align: center;
     background-color: #eef4ff;
     padding: 20px;
     border: 1px solid #002366;
     border-radius: 8px;
 }
-.Acasa h2 {
+h2 {
     color: #002366;
     font-size: 2rem;
 }
