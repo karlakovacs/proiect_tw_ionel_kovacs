@@ -1,10 +1,10 @@
 header {
     background-color: #8ea6d1;
     color: white;
-    padding: 20px 50px;
+    padding: 30px 80px;
     text-align: center;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #002366;
+    font-size: 2rem; 
+    border-bottom: 3px solid #002366; 
     width: 100%;
 }
 
@@ -12,28 +12,28 @@ footer {
     background-color: #e4a3d4;
     color: white;
     text-align: center;
-    padding: 20px 50px;
-    font-size: 1rem;
+    padding: 25px 80px; 
+    font-size: 1.2rem; 
     width: 100%;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 15px 50px;
+    gap: 30px; 
+    padding: 20px 80px; 
     background-color: #d7e3f3;
-    border-bottom: 2px solid #8ea6d1;
+    border-bottom: 3px solid #8ea6d1;
     width: 100%;
 }
 
 a {
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 15px 30px; 
     color: #002366;
-    border-radius: 8px;
+    border-radius: 12px; 
     background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 a:hover {
@@ -43,16 +43,16 @@ a:hover {
 a.active {
     background-color: #b0c4de;
     color: white;
-    border: 1px solid #0048ba;
+    border: 2px solid #0048ba; 
 }
 
 main {
     background-color: #f0f4fa;
-    padding: 40px 60px; 
-    border-radius: 10px;
-    margin: 20px auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    font-size: 1.2rem;
+    padding: 60px 100px; 
+    border-radius: 15px;
+    margin: 30px auto; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+    font-size: 1.4rem; 
     width: 90%; 
-    max-width: 1600px; 
+    max-width: 1500px; 
 }
