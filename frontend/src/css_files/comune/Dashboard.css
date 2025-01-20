@@ -1,27 +1,30 @@
 header {
-    background-color: #8ea6d1; 
+    background-color: #8ea6d1;
     color: white;
-    padding: 20px;
+    padding: 20px 50px;
     text-align: center;
     font-size: 1.8rem;
     border-bottom: 2px solid #002366;
+    width: 100%;
 }
 
 footer {
     background-color: #e4a3d4;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 50px;
     font-size: 1rem;
+    width: 100%;
 }
 
 nav {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 15px;
+    padding: 15px 50px;
     background-color: #d7e3f3;
     border-bottom: 2px solid #8ea6d1;
+    width: 100%;
 }
 
 a {
@@ -34,7 +37,7 @@ a {
 }
 
 a:hover {
-    background-color: #c9d6e7; 
+    background-color: #c9d6e7;
 }
 
 a.active {
@@ -45,9 +48,11 @@ a.active {
 
 main {
     background-color: #f0f4fa;
-    padding: 40px;
+    padding: 40px 80px;
     border-radius: 10px;
-    margin: 20px;
+    margin: 20px auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.2rem;
-}  
+    width: 100%;
+    max-width: 1200px;
+}
