@@ -78,7 +78,7 @@ const Setari = () => {
     };
 
     const handleDelogare = () => {
-        localStorage.removeItem('id');
+        localStorage.removeItem('ID');
         localStorage.removeItem('TIP');
         navigate('/auth');
     };
