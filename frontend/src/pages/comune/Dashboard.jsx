@@ -1,3 +1,4 @@
+import '../../css_files/comune/Dashboard.css';
 import { Outlet, NavLink } from 'react-router-dom';
 import { FaUser, FaCog } from 'react-icons/fa';
 
