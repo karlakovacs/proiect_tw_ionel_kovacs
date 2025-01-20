@@ -40,9 +40,9 @@ app.use(SesiuneRouter);
 app.use(CerereRouter);
 app.use(CerereFinalaRouter);
 
-// let port = process.env.PORT || 8001;
-// app.listen(port, () => {
-//     console.log("API is running on port " + port);
-// });
+let port = process.env.PORT || 8001;
+app.listen(port, () => {
+    console.log("API is running on port " + port);
+});
 
 export default app;
