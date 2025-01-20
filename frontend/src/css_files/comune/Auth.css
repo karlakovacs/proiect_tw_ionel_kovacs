@@ -1,4 +1,4 @@
-.Auth {
+main {
     background-color: #fff;
     padding: 30px;
     border-radius: 8px;
@@ -6,18 +6,19 @@
     max-width: 600px;
     margin: 20px auto;
 }
-.Auth h2 {
+main > h2 {
     color: #002366;
     margin-bottom: 20px;
 }
-.Auth input, .Auth select {
+main > input, main > select {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.Auth button {
+
+main > button {
     width: 100%;
     background-color: #002366;
     color: white;
@@ -26,6 +27,6 @@
     border-radius: 5px;
     cursor: pointer;
 }
-.Auth button:hover {
+main > button:hover {
     background-color: #0048ba;
 }
