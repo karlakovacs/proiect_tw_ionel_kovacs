@@ -1,3 +1,4 @@
+import './comune/Acasa.css';
 const Acasa = () => {
     return (
         <div>
