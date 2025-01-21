@@ -182,7 +182,7 @@ const Auth = () => {
 
 	return (
 		<div className="Auth">
-			<h2>{isSignUp ? "Sign Up" : "Login"}</h2>
+			<h1>{isSignUp ? "Sign Up" : "Login"}</h1>
 			{eroareAuth && <p style={{ color: "red" }}>{eroareAuth}</p>}
 			<form onSubmit={isSignUp ? handleSignUp : handleLogin}>
 				{/* FORMULAR PENTRU SIGN UP */}
