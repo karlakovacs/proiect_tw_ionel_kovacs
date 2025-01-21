@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaFileSignature } from "react-icons/fa";
 import { FaSignOutAlt } from "react-icons/fa";
+import { PiPasswordFill } from "react-icons/pi";
 
 const VITE_API_URL = import.meta.env.VITE_API_URL;
 const VITE_SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
@@ -156,13 +157,13 @@ const Setari = () => {
 				)}
 
 				<button type="button" onClick={handleSchimbareParola}>
-					Schimbă parola
+					<PiPasswordFill /> Schimbă parola
 				</button>
 			</form>
 
 			<h3>Deconectare</h3>
 			<button onClick={handleDelogare}>
-				<FaSignOutAlt /> Deconectare
+				<FaSignOutAlt /> Deconectați-vă
 			</button>
 		</div>
 	);
