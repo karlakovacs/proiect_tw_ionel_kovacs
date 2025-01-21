@@ -15,16 +15,18 @@
 }
 
 .SignaturePad {
-    border: 3px solid #002366; 
-    border-radius: 8px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
+    border: 2px solid #000; 
+    background-color: #ffffff; 
     height: 200px;
     width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    border-radius: 8px;
-    overflow: hidden;
+    max-width: 700px; 
+    margin: 0 auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden; 
 }
 
 .Semnatura button {
