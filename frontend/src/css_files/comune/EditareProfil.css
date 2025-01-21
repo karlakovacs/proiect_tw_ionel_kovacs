@@ -41,20 +41,10 @@
 
 .EditareProfil input[type="text"],
 .EditareProfil input[type="email"],
-.EditareProfil input[type="number"] {
-    width: 100%; 
-    max-width: calc(100% - 24px); 
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
+.EditareProfil input[type="number"],
 .EditareProfil select {
     width: 100%;
-    padding: 12px;
+    padding: 12px; 
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -78,7 +68,7 @@
     width: 100%;
     background-color: #002366;
     color: white;
-    padding: 12px;
+    padding: 12px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
