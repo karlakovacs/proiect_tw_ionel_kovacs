@@ -14,19 +14,12 @@
 	text-align: center;
 }
 
-.SignaturePad {
-	border: 2px solid #000;
-	background-color: #ffffff;
+.Semnatura canvas {
+	border: 1px solid black;
 	height: 200px;
 	width: 100%;
 	max-width: 700px;
 	margin: 0 auto;
-	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
 }
 
 .Semnatura button {
