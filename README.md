@@ -5,8 +5,8 @@
 - KOVACS Karla-Elena, grupa 1093, seria D
 
 ## Tema
-- Tema nr. 9
-- Aplicație web pentru înregistrarea la disertație
+- Număr: 9
+- Denumire: Aplicație web pentru înregistrarea la disertație
 
 ## Descriere
 
