@@ -54,22 +54,22 @@ router.route('/sesiuni/:id').put(async (req, res) => {
 router.post('/sesiuni/creare', async (req, res) => {
     const { idProfesor, dataInceput, dataSfarsit, nrMaximLocuri, descriere } = req.body;
 
-    try {   
+    try {
         const dataCurenta = moment().tz("Europe/Bucharest").startOf("day").toDate();
-        const dataInceput = moment(dataInceput).tz("Europe/Bucharest").startOf("day").toDate();
-        const dataSfarsit = moment(dataSfarsit).tz("Europe/Bucharest").endOf("day").toDate();
+        const dataStart = moment.utc(dataInceput).tz("Europe/Bucharest").startOf("day").toDate();
+        const dataEnd = moment.utc(dataSfarsit).tz("Europe/Bucharest").endOf("day").toDate();
 
-        console.log("data curenta", dataCurenta)
-        console.log("data start", dataInceput)
-        console.log("data end", dataSfarsit)
+        console.log("data curenta", dataCurenta);
+        console.log("data start", dataStart);
+        console.log("data end", dataEnd);
 
         // Validare 1: Data de start trebuie să fie în viitor sau astăzi
-        if (dataInceput < dataCurenta) {
+        if (dataStart < dataCurenta) {
             return res.status(400).json({ message: 'Data de început trebuie să fie cel puțin astăzi!' });
         }
 
         // Validare 2: Data de sfârșit trebuie să fie după data de start
-        if (dataSfarsit <= dataInceput) {
+        if (dataEnd <= dataStart) {
             return res.status(400).json({ message: 'Data de sfârșit trebuie să fie după data de început!' });
         }
 
@@ -79,16 +79,19 @@ router.post('/sesiuni/creare', async (req, res) => {
                 [Op.or]: [
                     {
                         dataInceput: {
-                            [Op.between]: [dataInceput, dataSfarsit],
+                            [Op.between]: [dataStart, dataEnd],
                         },
                     },
                     {
                         dataSfarsit: {
-                            [Op.between]: [dataInceput, dataSfarsit],
+                            [Op.between]: [dataStart, dataEnd],
                         },
                     },
                     {
-                        [Op.and]: [{ dataInceput: { [Op.lte]: dataInceput } }, { dataSfarsit: { [Op.gte]: dataSfarsit } }],
+                        [Op.and]: [
+                            { dataInceput: { [Op.lte]: dataStart } }, 
+                            { dataSfarsit: { [Op.gte]: dataEnd } }
+                        ],
                     },
                 ],
             },
@@ -100,8 +103,8 @@ router.post('/sesiuni/creare', async (req, res) => {
 
         const sesiuneNoua = await Sesiune.create({
             idProfesor,
-            dataInceput,
-            dataSfarsit,
+            dataInceput: dataStart, 
+            dataSfarsit: dataEnd, 
             nrMaximLocuri,
             descriere,
         });
@@ -112,6 +115,7 @@ router.post('/sesiuni/creare', async (req, res) => {
         res.status(500).json({ message: 'Eroare internă la server!' });
     }
 });
+
 
 router.get('/sesiuni/profesor/:id', async (req, res) => {
     const { id } = req.params;
