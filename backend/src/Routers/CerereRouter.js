@@ -313,24 +313,8 @@ router.put("/cereri/aprobare/:idCerere", async (req, res) => {
         const { nrLocuriOcupate, nrMaximLocuri } = sesiune;
 
         if (nrLocuriOcupate >= nrMaximLocuri) {
-            // Dacă sesiunea este deja plină, respinge toate cererile rămase
-            await Cerere.update(
-                {
-                    statusPreliminar: "RESPINSA",
-                    dataRaspunsProfesor: new Date(),
-                    motivRespingere: "Numărul maxim de studenți a fost atins.",
-                },
-                {
-                    where: {
-                        idSesiune: idSesiune,
-                        statusPreliminar: "IN_ASTEPTARE",
-                    },
-                }
-            );
-
             return res.status(400).json({
-                message:
-                    "Sesiunea este completă. Toate cererile rămase au fost respinse.",
+                message: "Sesiunea este completă. Nu se mai pot aproba cereri.",
             });
         }
 
@@ -344,7 +328,7 @@ router.put("/cereri/aprobare/:idCerere", async (req, res) => {
                 where: { id: idCerere },
             }
         );
-        
+
         // Respinge toate cererile IN_ASTEPTARE ale studentului curent
         await Cerere.update(
             {
@@ -361,14 +345,35 @@ router.put("/cereri/aprobare/:idCerere", async (req, res) => {
         );
 
         // Incrementează numărul de locuri ocupate
-        await Sesiune.update(
+        const sesiuneUpdated = await Sesiune.update(
             {
                 nrLocuriOcupate: nrLocuriOcupate + 1,
             },
             {
                 where: { id: idSesiune },
+                returning: true,
+                plain: true,
             }
         );
+
+        const locuriOcupateNou = nrLocuriOcupate + 1;
+
+        // Dacă locurile ocupate sunt egale cu locurile maxime, respinge cererile rămase
+        if (locuriOcupateNou === nrMaximLocuri) {
+            await Cerere.update(
+                {
+                    statusPreliminar: "RESPINSA",
+                    dataRaspunsProfesor: new Date(),
+                    motivRespingere: "Numărul maxim de studenți a fost atins.",
+                },
+                {
+                    where: {
+                        idSesiune: idSesiune,
+                        statusPreliminar: "IN_ASTEPTARE",
+                    },
+                }
+            );
+        }
 
         res.status(200).json({
             message:
