@@ -61,7 +61,7 @@ router.get("/cereri/student/:id", async (req, res) => {
 	try {
 		const cereri = await Cerere.findAll({
 			where: { idStudent: id },
-			attributes: ["id", "idSesiune"],
+			attributes: ["id", "idSesiune", "statusPreliminar"],
 		});
 
 		res.json(cereri);
