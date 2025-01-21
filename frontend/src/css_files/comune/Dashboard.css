@@ -1,3 +1,7 @@
+.Dashboard h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .Dashboard nav {
 	display: flex;
 	justify-content: center;

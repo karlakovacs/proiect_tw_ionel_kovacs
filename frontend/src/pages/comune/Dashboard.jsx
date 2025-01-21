@@ -24,7 +24,7 @@ const Dashboard = () => {
 	};
 
 	return (
-		<div>
+		<div className="Dashboard">
 			<header>
 				<h1>Dashboard</h1>
 				<nav>
