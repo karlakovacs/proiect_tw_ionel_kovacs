@@ -5,13 +5,13 @@
 - KOVACS Karla-Elena, grupa 1093, seria D
 
 ## Tema
-Tema nr. 9: Aplicație web pentru înregistrarea la disertație
+- Tema nr. 9
+- Aplicație web pentru înregistrarea la disertație
 
 ## Descriere
 
-Aplicația trebuie să permită administrarea unor cereri de disertație.
-
-Platforma este bazată pe o aplicație web cu arhitectură de tip Single Page Application accesibilă în browser de pe desktop, dispozitive mobile sau tablete (considerând preferințele utilizatorului).
+- Aplicația trebuie să permită administrarea unor cereri de disertație.
+- Platforma este bazată pe o aplicație web cu arhitectură de tip Single Page Application accesibilă în browser de pe desktop, dispozitive mobile sau tablete (considerând preferințele utilizatorului).
 
 ## Funcționalități (minime)
 
