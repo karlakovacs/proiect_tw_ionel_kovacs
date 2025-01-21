@@ -1,0 +1,84 @@
+.TrimitereCerere {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.TrimitereCerere h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #002366;
+  margin-bottom: 20px;
+}
+
+.TrimitereCerere form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.TrimitereCerere label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.TrimitereCerere input,
+.TrimitereCerere textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.TrimitereCerere input:focus,
+.TrimitereCerere textarea:focus {
+  border-color: #002366;
+  outline: none;
+}
+
+.TrimitereCerere textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.TrimitereCerere button[type="submit"] {
+  background-color: #002366;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.TrimitereCerere button[type="submit"]:hover {
+  background-color: #1d3557;
+}
+
+.TrimitereCerere button {
+  background: none;
+  border: none;
+  color: #002366;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+
+.TrimitereCerere button:hover {
+  color: #1d3557;
+}
+
+.TrimitereCerere p {
+  font-size: 0.9rem;
+  color: #e63946;
+}
+
+.TrimitereCerere p.success {
+  color: #2a9d8f;
+}
