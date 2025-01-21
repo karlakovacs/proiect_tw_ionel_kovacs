@@ -59,10 +59,6 @@ router.post('/sesiuni/creare', async (req, res) => {
         const dataStart = moment.utc(dataInceput).tz("Europe/Bucharest").startOf("day").toDate();
         const dataEnd = moment.utc(dataSfarsit).tz("Europe/Bucharest").endOf("day").toDate();
 
-        console.log("data curenta", dataCurenta);
-        console.log("data start", dataStart);
-        console.log("data end", dataEnd);
-
         // Validare 1: Data de start trebuie să fie în viitor sau astăzi
         if (dataStart < dataCurenta) {
             return res.status(400).json({ message: 'Data de început trebuie să fie cel puțin astăzi!' });
