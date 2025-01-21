@@ -13,9 +13,17 @@
     margin-top: 20px;
     background-color: #ffffff;
     border: 1px solid #ccc;
+    color: #002366; 
 }
 
-.Cerere th, .Cerere td {
+.Cerere th {
+    background-color: #e0e7ff; 
+    color: #002366;
+    text-align: left;
+    padding: 12px;
+}
+
+.Cerere td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ccc;
