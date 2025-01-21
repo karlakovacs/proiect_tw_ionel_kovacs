@@ -1,31 +1,32 @@
-/* nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    background-color: #d7e3f3;
-    border-bottom: 2px solid #8ea6d1;
+.Dashboard nav {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 15px;
+	background-color: #d7e3f3;
+	border-bottom: 2px solid #8ea6d1;
 }
 
-a {
-    text-decoration: none;
-    padding: 10px 15px;
-    color: #002366;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.Dashboard .nav-link {
+	text-decoration: none;
+	padding: 10px 15px;
+	color: #002366;
+	border-radius: 8px;
+	background-color: #ffffff;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-a:hover {
-    background-color: #c9d6e7; 
+.Dashboard .nav-link:hover {
+	background-color: #c9d6e7;
 }
 
-a.active {
-    background-color: #b0c4de;
-    color: white;
-    border: 1px solid #0048ba;
+.Dashboard .nav-link.active {
+	background-color: #b0c4de;
+	color: white;
+	border: 1px solid #0048ba;
 }
 
+/* 
 main {
     background-color: #f0f4fa;
     padding: 40px;
@@ -33,5 +34,4 @@ main {
     margin: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-size: 1.2rem;
-}
- */
+} */
