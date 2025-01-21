@@ -156,7 +156,7 @@ const Setari = () => {
 					</p>
 				)}
 
-				<button type="button" onClick={handleSchimbareParola}>
+				<button onClick={handleSchimbareParola}>
 					<PiPasswordFill /> Schimbă parola
 				</button>
 			</form>

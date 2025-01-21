@@ -80,15 +80,21 @@ const Sesiuni = () => {
 				}
 
 				const data = await response.json();
-				setCereri(data);
+				const sesiuneIds = sesiuni.map((sesiune) => sesiune.id);
+				const cereriFiltrate = data.filter((cerere) =>
+					sesiuneIds.includes(cerere.idSesiune)
+				);
+				setCereri(cereriFiltrate);
 			} catch (err) {
 				console.error("Eroare:", err);
 				setError(err.message);
 			}
 		};
 
-		fetchCereri();
-	}, [id]);
+		if (sesiuni.length > 0) {
+			fetchCereri();
+		}
+	}, [id, sesiuni]);
 
 	const handleTrimiteCerere = (idSesiune) => {
 		navigate(`/student/${id}/trimitere-cerere/${id}/${idSesiune}`);
@@ -103,7 +109,7 @@ const Sesiuni = () => {
 	};
 
 	const areCerereAprobata = () => {
-		return cereri.some((cerere) => cerere.status === "APROBATA");
+		return cereri.some((cerere) => cerere.statusPreliminar === "APROBATA");
 	};
 
 	if (loading) {
