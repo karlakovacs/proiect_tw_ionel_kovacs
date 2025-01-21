@@ -31,29 +31,6 @@
     text-align: left;
     border: 1px solid #ccc;
 }
-/* 
-.Cereri table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.Cereri table tbody tr:hover {
-    background-color: #f1f1f1;
-} */
-
-/* .Cereri table .respinsa {
-    background-color: #ffe6e6;
-    color: #d9534f;
-}
-
-.Cereri table .in-asteptare {
-    background-color: #fff5cc;
-    color: #f0ad4e;
-}
-
-.Cereri table .aprobata {
-    background-color: #e6ffe6;
-    color: #5cb85c;
-} */
 
 .Cereri img {
     width: 40px;
