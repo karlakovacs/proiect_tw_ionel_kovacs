@@ -1,5 +1,5 @@
 .Auth {
-  max-width: 500px;
+  max-width: 400px;
   margin: 50px auto;
   padding: 25px;
   background: #ffffff;
@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: center; 
 }
 
 .Auth label {
@@ -26,11 +27,13 @@
   font-weight: 600;
   color: #1d3557;
   margin-bottom: 5px;
+  align-self: flex-start; 
 }
 
 .Auth input,
 .Auth select {
-  width: 100%;
+  width: 80%; 
+  max-width: 280px; 
   padding: 12px;
   border: 1px solid #b1c5d9;
   border-radius: 5px;
@@ -49,6 +52,8 @@
   background: #274c77;
   color: white;
   padding: 12px;
+  width: 80%; 
+  max-width: 280px; 
   border: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -108,5 +113,11 @@
 
   .Auth h1 {
     font-size: 1.6rem;
+  }
+
+  .Auth input,
+  .Auth button[type="submit"] {
+    width: 100%;
+    max-width: none;
   }
 }
