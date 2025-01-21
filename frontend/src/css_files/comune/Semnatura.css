@@ -46,6 +46,7 @@
 }
 
 .Semnatura .butoane {
+    display: inline;
 	text-align: center;
 	margin-top: 20px;
 }
