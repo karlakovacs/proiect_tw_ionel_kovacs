@@ -1,7 +1,7 @@
 import '../../css_files/comune/Acasa.css';
 const Acasa = () => {
     return (
-        <div>
+        <div className="Acasa">
             <h2>Bun venit!</h2>
         </div>
     );
