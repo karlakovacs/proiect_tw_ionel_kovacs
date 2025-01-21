@@ -1,17 +1,17 @@
 .Auth {
   max-width: 400px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 25px;
   background: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  border-radius: 10px;
   font-family: 'Arial', sans-serif;
 }
 
 .Auth h1 {
   text-align: center;
-  font-size: 1.8rem;
-  color: #333;
+  font-size: 2rem;
+  color: #274c77;
   margin-bottom: 20px;
 }
 
@@ -22,60 +22,61 @@
 }
 
 .Auth label {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #555;
+  color: #1d3557;
   margin-bottom: 5px;
 }
 
 .Auth input,
 .Auth select {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 12px;
+  border: 1px solid #b1c5d9;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   outline: none;
-  transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Auth input:focus,
 .Auth select:focus {
-  border: 1px solid #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border: 1px solid #1d3557;
+  box-shadow: 0 0 5px rgba(39, 76, 119, 0.5);
 }
 
 .Auth button[type="submit"] {
-  background: #007bff;
+  background: #274c77;
   color: white;
-  padding: 10px 15px;
+  padding: 12px;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .Auth button[type="submit"]:hover {
-  background: #0056b3;
+  background: #1d3557;
+  transform: scale(1.02);
 }
 
 .Auth button {
   background: none;
   border: none;
-  color: #007bff;
+  color: #274c77;
   text-decoration: underline;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   cursor: pointer;
 }
 
 .Auth button:hover {
-  color: #0056b3;
+  color: #1d3557;
 }
 
 .Auth p {
   font-size: 0.9rem;
-  color: #ff4d4d;
+  color: #e63946;
   margin: 0;
 }
 
@@ -84,28 +85,28 @@
 }
 
 .Auth p.valid {
-  color: green;
+  color: #2a9d8f;
 }
 
 .Auth select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23212121' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.295l4.59 4.59 4.59-4.59L18 9.705l-6 6-6-6z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23274c77' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.295l4.59 4.59 4.59-4.59L18 9.705l-6 6-6-6z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 12px;
+  background-position: right 12px center;
+  background-size: 14px;
 }
 
-button[type="submit"]:disabled {
-  background: #cccccc;
+.Auth button[type="submit"]:disabled {
+  background: #b1c5d9;
   cursor: not-allowed;
 }
 
 @media (max-width: 480px) {
   .Auth {
-    padding: 15px;
+    padding: 20px;
   }
 
   .Auth h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
