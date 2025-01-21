@@ -45,31 +45,3 @@ th {
   font-size: 12px;
   text-transform: uppercase;
 }
-/* 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-tr:hover {
-  background-color: #e6f7ff;
-  cursor: pointer;
-}
-
-td {
-  border-bottom: 1px solid #ddd;
-}
-
-tr[style*="background-color: yellow"] {
-  background-color: #fff8e1 !important;
-  font-weight: bold;
-}
-
-td:first-child,
-th:first-child {
-  border-radius: 8px 0 0 8px;
-}
-
-td:last-child,
-th:last-child {
-  border-radius: 0 8px 8px 0;
-} */
