@@ -236,7 +236,7 @@ const EditareProfil = () => {
 							</option>
 							<option value="IF">IF</option>
 							<option value="IFR">IFR</option>
-							<option value="id">id</option>
+							<option value="ID">ID</option>
 						</select>
 						{validari.formaInvatamant && (
 							<p style={{ color: "red" }}>
