@@ -13,6 +13,12 @@
     border-bottom: 2px solid #a70241;
 } */
 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* status cerere */
 .respinsa {
     background-color: #f8d7da;
