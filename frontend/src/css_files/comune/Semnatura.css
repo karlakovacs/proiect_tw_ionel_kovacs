@@ -15,12 +15,12 @@
 }
 
 .SignaturePad {
-    border: 2px solid #ccc;
+    border: 3px solid #002366; 
     margin-bottom: 20px;
     background-color: #f9f9f9;
     height: 200px;
     width: 100%;
-    max-width: 500px; 
+    max-width: 700px;
     margin: 0 auto;
     border-radius: 8px;
     overflow: hidden;
