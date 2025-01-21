@@ -1,47 +1,103 @@
 .EditareProfil {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
     margin: 20px auto;
 }
 
+.EditareProfil h2 {
+    color: #002366;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
 .EditareProfil img {
-    display: block;
-    margin: 0 auto 20px;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #002366;
-}
-
-.Semnatura {
-    background-color: #f9f9f9;
-    width: 50%;
-    height: 300px;
-    border: 2px dashed #ccc;
-    margin: 20px auto;
-}
-
-.Profil h2 {
-    text-align: center;
-    color: #002366;
-}
-
-.Profil img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 20px auto;
     display: block;
-    border: 2px solid #002366;
+    margin: 0 auto 20px;
 }
 
-.Profil p {
-    margin: 10px 0;
-    color: #333;
-    font-size: 1rem;
+.EditareProfil input[type="file"] {
+    display: block;
+    margin: 10px auto;
+}
+
+.EditareProfil label {
+    display: block;
+    margin-bottom: 5px;
+    color: #002366;
+    font-weight: bold;
+}
+
+.EditareProfil input[type="text"],
+.EditareProfil input[type="email"],
+.EditareProfil input[type="number"],
+.EditareProfil select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.EditareProfil input[type="text"]:focus,
+.EditareProfil input[type="email"]:focus,
+.EditareProfil input[type="number"]:focus,
+.EditareProfil select:focus {
+    outline: none;
+    border-color: #002366;
+}
+
+.EditareProfil p {
+    color: red;
+    font-size: 14px;
+}
+
+.EditareProfil button {
+    width: 100%;
+    background-color: #002366;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.EditareProfil button:hover {
+    background-color: #0048ba;
+}
+
+.EditareProfil .back-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #002366;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.EditareProfil .back-button:hover {
+    color: #0048ba;
+}
+
+.EditareProfil .form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.EditareProfil .form-actions button {
+    width: 48%;
 }
