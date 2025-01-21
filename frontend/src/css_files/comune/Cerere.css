@@ -28,14 +28,14 @@
 	text-align: left;
 	border: 1px solid #ccc;
 }
-
+/* 
 .Cerere tr:nth-child(even) {
 	background-color: #eef4ff;
 }
 
 .Cerere tr:hover {
 	background-color: #d7e3f3;
-}
+} */
 
 .Cerere h2 {
 	text-align: left;

@@ -37,14 +37,14 @@
     border: 1px solid #ccc;
     font-size: 14px;
 }
-
+/* 
 .CereriFinale tr:nth-child(even) {
     background-color: #eef4ff;
 }
 
 .CereriFinale tr:hover {
     background-color: #d7e3f3;
-}
+} */
 
 .CereriFinale button {
     background-color: #002366;
