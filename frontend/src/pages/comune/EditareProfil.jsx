@@ -1,3 +1,4 @@
+import "../../css_files/comune/EditareProfil.css";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaArrowLeft, FaSave } from "react-icons/fa";
@@ -168,7 +169,7 @@ const EditareProfil = () => {
 	};
 
 	return (
-		<div>
+		<div className="EditareProfil">
 			<h2>Editare profil</h2>
 
 			<div>

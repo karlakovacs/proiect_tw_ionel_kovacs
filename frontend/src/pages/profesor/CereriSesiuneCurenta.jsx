@@ -1,3 +1,4 @@
+import "../../css_files/profesor/CereriSesiuneCurenta.css";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import imagineDefault from "../../assets/profile-placeholder.svg";
@@ -88,7 +89,7 @@ const CereriSesiuneCurenta = () => {
 	}
 
 	return (
-		<div>
+		<div className="CereriSesiuneCurenta">
 			<h2>Cererile din sesiunea curentă</h2>
 			{cereri.length === 0 ? (
 				<p>Nu există cereri disponibile.</p>

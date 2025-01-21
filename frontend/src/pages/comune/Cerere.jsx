@@ -1,3 +1,4 @@
+import "../../css_files/comune/Cerere.css";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import CereriFinale from "./CereriFinale";
@@ -58,14 +59,17 @@ const Cerere = () => {
 
 	const handleAproba = async () => {
 		try {
-			const response = await fetch(`${VITE_API_URL}/cereri/aprobare/${idCerere}`, {
-				method: "PUT",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({
-					statusPreliminar: "APROBATA",
-					dataRaspunsProfesor: new Date(),
-				}),
-			});
+			const response = await fetch(
+				`${VITE_API_URL}/cereri/aprobare/${idCerere}`,
+				{
+					method: "PUT",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						statusPreliminar: "APROBATA",
+						dataRaspunsProfesor: new Date(),
+					}),
+				}
+			);
 
 			if (!response.ok) throw new Error("Eroare la aprobarea cererii!");
 
@@ -120,7 +124,7 @@ const Cerere = () => {
 	}
 
 	return (
-		<div>
+		<div className="Cerere">
 			<h2>Detalii cerere</h2>
 			{mesajSucces && <p style={{ color: "green" }}>{mesajSucces}</p>}
 			<p>
@@ -201,8 +205,10 @@ const Cerere = () => {
 						</div>
 					</div>
 				)}
-            
-            {cerere.statusPreliminar === "APROBATA" && <CereriFinale idCerere={ idCerere } />}
+
+			{cerere.statusPreliminar === "APROBATA" && (
+				<CereriFinale idCerere={idCerere} />
+			)}
 			<button onClick={() => navigate(-1)} style={{ marginTop: "10px" }}>
 				Înapoi
 			</button>

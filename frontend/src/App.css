@@ -14,40 +14,40 @@
 } */
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 header {
-    background-color: #8ea6d1; 
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #002366;
+	background-color: #8ea6d1;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.8rem;
+	border-bottom: 2px solid #002366;
 }
 
 footer {
-    background-color: #e4a3d4;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 1rem;
+	background-color: #e4a3d4;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	font-size: 1rem;
 }
 
 /* status cerere */
 .respinsa {
-    background-color: #f8d7da;
-    color: #721c24;
+	background-color: #f8d7da;
+	color: #721c24;
 }
 
 .in-asteptare {
-    background-color: #fff3cd;
-    color: #856404;
+	background-color: #fff3cd;
+	color: #856404;
 }
 
 .aprobata {
-    background-color: #d4edda;
-    color: #155724;
+	background-color: #d4edda;
+	color: #155724;
 }

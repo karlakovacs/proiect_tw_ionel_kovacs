@@ -1,3 +1,4 @@
+import '../../css_files/comune/CereriFinale.css';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -152,7 +153,7 @@ const CereriFinale = ({ idCerere }) => {
 	};
 
 	return (
-		<div>
+		<div className='CereriFinale'>
 			<h2>Cereri finale</h2>
 
 			{cereriFinale.length === 0 ? (

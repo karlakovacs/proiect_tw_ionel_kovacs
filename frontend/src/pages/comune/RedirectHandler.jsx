@@ -1,21 +1,21 @@
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const RedirectHandler = () => {
-    const navigate = useNavigate();
+	const navigate = useNavigate();
 
-    useEffect(() => {
-        const ID = localStorage.getItem('ID');
-        const TIP = localStorage.getItem('TIP');
+	useEffect(() => {
+		const ID = localStorage.getItem("ID");
+		const TIP = localStorage.getItem("TIP");
 
-        if (ID && TIP) {
-            navigate(`/${TIP.toLowerCase()}/${ID}`);
-        } else {
-            navigate('/auth');
-        }
-    }, [navigate]);
+		if (ID && TIP) {
+			navigate(`/${TIP.toLowerCase()}/${ID}`);
+		} else {
+			navigate("/auth");
+		}
+	}, [navigate]);
 
-    return null;
+	return null;
 };
 
 export default RedirectHandler;

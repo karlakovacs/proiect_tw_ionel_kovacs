@@ -1,3 +1,4 @@
+import "../../css_files/student/Sesiuni.css";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import imagineDefault from "../../assets/profile-placeholder.svg";
@@ -5,7 +6,7 @@ import imagineDefault from "../../assets/profile-placeholder.svg";
 const VITE_API_URL = import.meta.env.VITE_API_URL;
 const VITE_SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
 
-const Cereri = () => {
+const Sesiuni = () => {
 	const { id } = useParams();
 
 	const [sesiuni, setSesiuni] = useState([]);
@@ -114,7 +115,7 @@ const Cereri = () => {
 	}
 
 	return (
-		<div>
+		<div className="Sesiuni">
 			<h2>Sesiuni de înscriere</h2>
 			{sesiuni.length === 0 ? (
 				<p>Nu există sesiuni disponibile.</p>
@@ -216,4 +217,4 @@ const Cereri = () => {
 	);
 };
 
-export default Cereri;
+export default Sesiuni;

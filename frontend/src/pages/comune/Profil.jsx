@@ -1,3 +1,4 @@
+import "../../css_files/comune/Profil.css";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaPencilAlt } from "react-icons/fa";
@@ -40,7 +41,7 @@ const Profil = () => {
 	}
 
 	return (
-		<div>
+		<div className="Profil">
 			<h2>Profilul utilizatorului</h2>
 
 			<img

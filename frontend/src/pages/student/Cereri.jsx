@@ -1,3 +1,4 @@
+import "../../css_files/student/Cereri.css";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import imagineDefault from "../../assets/profile-placeholder.svg";
@@ -47,7 +48,7 @@ const Cereri = () => {
 	}
 
 	return (
-		<div>
+		<div className="Cereri">
 			<h2>Cererile mele</h2>
 			{cereri.length === 0 ? (
 				<p>Nu există cereri disponibile.</p>
