@@ -69,20 +69,11 @@ const Semnatura = () => {
 	return (
 		<div className="Semnatura">
 			<h2>Semnătura virtuală</h2>
-			<div
-				style={{
-					width: "50vw",
-					height: "25vw",
-					border: "1px solid #ccc",
-					marginBottom: "10px",
-				}}
-			>
-				<SignaturePad
-					ref={signatureRef}
-					options={{ minWidth: 1, maxWidth: 3, penColor: "black" }}
-					style={{ width: "100%", height: "100%" }}
-				/>
-			</div>
+			<SignaturePad
+				ref={signatureRef}
+				options={{ minWidth: 1, maxWidth: 3, penColor: "black" }}
+				className="SignaturePad"
+			/>
 
 			<div>
 				<button onClick={() => navigate(-1)}>

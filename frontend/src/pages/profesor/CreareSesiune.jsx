@@ -76,8 +76,8 @@ const CreareSesiune = () => {
 
 		try {
 			console.log(
-				new Date(formData.dataInceput).setHours(0, 0, 0, 0),
-				new Date(formData.dataSfarsit).setHours(23, 59, 59, 999)
+				new Date(formData.dataInceput).toISOString(),
+                new Date(formData.dataSfarsit).toISOString(),
 			);
 
 			const response = await fetch(`${VITE_API_URL}/sesiuni/creare`, {
@@ -85,18 +85,8 @@ const CreareSesiune = () => {
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({
 					idProfesor: id,
-					dataInceput: new Date(formData.dataInceput).setHours(
-						0,
-						0,
-						0,
-						0
-					),
-					dataSfarsit: new Date(formData.dataSfarsit).setHours(
-						23,
-						59,
-						59,
-						999
-					),
+					dataInceput: new Date(formData.dataInceput).toISOString(),
+                    dataSfarsit: new Date(formData.dataSfarsit).toISOString(),
 					nrMaximLocuri: parseInt(formData.nrMaximLocuri, 10),
 					descriere: formData.descriere,
 				}),

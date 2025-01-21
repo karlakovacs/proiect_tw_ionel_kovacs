@@ -6,6 +6,7 @@ import Sesiune from '../Entities/Sesiune.js';
 import Profesor from '../Entities/Profesor.js';
 import Utilizator from '../Entities/Utilizator.js';
 import Facultate from '../Entities/Facultate.js';
+import moment from "moment-timezone";
 
 let router = express.Router();
 
@@ -53,26 +54,22 @@ router.route('/sesiuni/:id').put(async (req, res) => {
 router.post('/sesiuni/creare', async (req, res) => {
     const { idProfesor, dataInceput, dataSfarsit, nrMaximLocuri, descriere } = req.body;
 
-    try {
-        const dataCurenta = new Date();
-        dataCurenta.setHours(0, 0, 0, 0);
-
-        const dataStart = new Date(dataInceput);
-        const dataEnd = new Date(dataSfarsit);
+    try {   
+        const dataCurenta = moment().tz("Europe/Bucharest").startOf("day").toDate();
+        const dataInceput = moment(dataInceput).tz("Europe/Bucharest").startOf("day").toDate();
+        const dataSfarsit = moment(dataSfarsit).tz("Europe/Bucharest").endOf("day").toDate();
 
         console.log("data curenta", dataCurenta)
-        console.log("data inceput", dataInceput)
-        console.log("data sfarsit", dataSfarsit)
-        console.log("data start", dataStart)
-        console.log("data end", dataEnd)
+        console.log("data start", dataInceput)
+        console.log("data end", dataSfarsit)
 
         // Validare 1: Data de start trebuie să fie în viitor sau astăzi
-        if (dataStart < dataCurenta) {
+        if (dataInceput < dataCurenta) {
             return res.status(400).json({ message: 'Data de început trebuie să fie cel puțin astăzi!' });
         }
 
         // Validare 2: Data de sfârșit trebuie să fie după data de start
-        if (dataEnd <= dataStart) {
+        if (dataSfarsit <= dataInceput) {
             return res.status(400).json({ message: 'Data de sfârșit trebuie să fie după data de început!' });
         }
 
