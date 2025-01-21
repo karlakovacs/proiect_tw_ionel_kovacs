@@ -1,10 +1,13 @@
-h2 {
-    text-align: left;
-    color: #002366;
-    margin-bottom: 20px;
+.Cerere-container {
+    background-color: #f0f4fa;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
 }
 
-table {
+.Cerere-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -12,16 +15,22 @@ table {
     border: 1px solid #ccc;
 }
 
-th, td {
+.Cerere-table th, .Cerere-table td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ccc;
 }
 
-tr:nth-child(even) {
+.Cerere-table tr:nth-child(even) {
     background-color: #eef4ff;
 }
 
-tr:hover {
+.Cerere-table tr:hover {
     background-color: #d7e3f3;
+}
+
+.Cerere-title {
+    text-align: left;
+    color: #002366;
+    margin-bottom: 20px;
 }
