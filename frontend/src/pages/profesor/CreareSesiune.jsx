@@ -75,6 +75,8 @@ const CreareSesiune = () => {
 		}
 
 		try {
+            console.log(new Date(formData.dataInceput), new Date(formData.dataSfarsit));
+
 			const response = await fetch(`${VITE_API_URL}/sesiuni/creare`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
