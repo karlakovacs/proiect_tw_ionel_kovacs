@@ -1,22 +1,19 @@
-/* .nav-link {
-    text-decoration: none;
-    color: black;
-    margin: 0px 10px 5px 0px;
-}
-
-.nav-link:hover {
-    color: rgb(180, 26, 160);
-}
-
-.nav-link.active {
-    color: #a70241;
-    border-bottom: 2px solid #a70241;
-} */
-
-body {
+/* body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+} */
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
 }
 
 header {
@@ -34,6 +31,7 @@ footer {
 	text-align: center;
 	padding: 20px;
 	font-size: 1rem;
+	border-top: 2px solid #8ea6d1;
 }
 
 /* status cerere */
