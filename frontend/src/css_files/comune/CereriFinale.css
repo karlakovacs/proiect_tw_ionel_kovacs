@@ -1,0 +1,35 @@
+.CereriFinale {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.CereriFinale table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+.CereriFinale th, .CereriFinale td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.CereriFinale tr:nth-child(even) {
+    background-color: #eef4ff;
+}
+
+.CereriFinale tr:hover {
+    background-color: #d7e3f3;
+}
+
+.CereriFinale h2 {
+    text-align: left;
+    color: #002366;
+    margin-bottom: 20px;
+}
