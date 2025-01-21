@@ -29,11 +29,15 @@
     overflow: hidden; 
 }
 
+.Semnatura .button-container {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
 .Semnatura button {
-    display: block;
-    width: 90%;
-    max-width: 300px;
-    margin: 15px auto; 
     background-color: #002366;
     color: white;
     padding: 10px 20px;
@@ -41,7 +45,6 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    text-align: center;
     transition: background-color 0.3s ease;
 }
 
@@ -57,10 +60,6 @@
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    width: 90%;
-    max-width: 300px;
-    margin: 15px auto; 
-    text-align: center;
     transition: background-color 0.3s ease;
 }
 
