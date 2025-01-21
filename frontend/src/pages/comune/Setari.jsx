@@ -119,7 +119,7 @@ const Setari = () => {
 					navigate(`/${TIP.toLowerCase()}/${id}/semnatura`)
 				}
 			>
-				<FaFileSignature /> Setare semnătură
+				<FaFileSignature /> Setează o semnătură
 			</button>
 
 			<h3>Schimbare parolă</h3>
