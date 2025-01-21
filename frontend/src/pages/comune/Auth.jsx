@@ -181,7 +181,7 @@ const Auth = () => {
 	};
 
 	return (
-		<div>
+		<div className="Auth">
 			<h2>{isSignUp ? "Sign Up" : "Login"}</h2>
 			{eroareAuth && <p style={{ color: "red" }}>{eroareAuth}</p>}
 			<form onSubmit={isSignUp ? handleSignUp : handleLogin}>
