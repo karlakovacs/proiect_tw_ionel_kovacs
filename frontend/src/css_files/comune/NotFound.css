@@ -1,0 +1,21 @@
+.NotFound {
+    width: 100%; 
+    height: auto; 
+    max-width: 400px; 
+    margin: 0 auto; 
+    display: block;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.NotFound-container {
+    text-align: center;
+    margin: 40px 0; 
+}
+
+.NotFound-message {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+    font-weight: 600;
+}
