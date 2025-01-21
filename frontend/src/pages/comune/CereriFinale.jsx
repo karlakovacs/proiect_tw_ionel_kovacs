@@ -80,8 +80,6 @@ const CereriFinale = ({ idCerere }) => {
                         errorData.message || "Eroare la semnarea cererii!"
                     );
                 }
-    
-                alert("Cererea a fost semnată cu succes!");
             }
     
             alert(
