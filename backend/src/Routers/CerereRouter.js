@@ -281,73 +281,103 @@ router.get(
 );
 
 router.put("/cereri/aprobare/:idCerere", async (req, res) => {
-	const { idCerere } = req.params;
+    const { idCerere } = req.params;
 
-	try {
-		const cerere = await Cerere.findOne({
-			where: { id: idCerere },
-			attributes: ["idStudent", "idSesiune"],
-		});
+    try {
+        // Găsește cererea curentă
+        const cerere = await Cerere.findOne({
+            where: { id: idCerere },
+            attributes: ["idStudent", "idSesiune"],
+        });
 
-		if (!cerere) {
-			return res
-				.status(404)
-				.json({ message: "Cererea nu a fost găsită!" });
-		}
+        if (!cerere) {
+            return res
+                .status(404)
+                .json({ message: "Cererea nu a fost găsită!" });
+        }
 
-		const { idStudent, idSesiune } = cerere;
+        const { idStudent, idSesiune } = cerere;
 
-		await Cerere.update(
-			{
-				statusPreliminar: "RESPINSA",
-				dataRaspunsProfesor: new Date(),
-			},
-			{
-				where: {
-					idStudent: idStudent,
-					statusPreliminar: "IN_ASTEPTARE",
-				},
-			}
-		);
+        // Găsește sesiunea asociată cererii
+        const sesiune = await Sesiune.findOne({
+            where: { id: idSesiune },
+            attributes: ["nrLocuriOcupate", "nrMaximLocuri"],
+        });
 
-		await Cerere.update(
-			{
-				statusPreliminar: "APROBATA",
-				dataRaspunsProfesor: new Date(),
-			},
-			{
-				where: { id: idCerere },
-			}
-		);
+        if (!sesiune) {
+            return res
+                .status(404)
+                .json({ message: "Sesiunea nu a fost găsită!" });
+        }
 
-		const sesiune = await Sesiune.findOne({
-			where: { id: idSesiune },
-			attributes: ["nrLocuriOcupate"],
-		});
+        const { nrLocuriOcupate, nrMaximLocuri } = sesiune;
 
-		if (!sesiune) {
-			return res
-				.status(404)
-				.json({ message: "Sesiunea nu a fost găsită!" });
-		}
+        if (nrLocuriOcupate >= nrMaximLocuri) {
+            // Dacă sesiunea este deja plină, respinge toate cererile rămase
+            await Cerere.update(
+                {
+                    statusPreliminar: "RESPINSA",
+                    dataRaspunsProfesor: new Date(),
+                    motivRespingere: "Numărul maxim de studenți a fost atins.",
+                },
+                {
+                    where: {
+                        idSesiune: idSesiune,
+                        statusPreliminar: "IN_ASTEPTARE",
+                    },
+                }
+            );
 
-		await Sesiune.update(
-			{
-				nrLocuriOcupate: sesiune.nrLocuriOcupate + 1,
-			},
-			{
-				where: { id: idSesiune },
-			}
-		);
+            return res.status(400).json({
+                message:
+                    "Sesiunea este completă. Toate cererile rămase au fost respinse.",
+            });
+        }
 
-		res.status(200).json({
-			message:
-				"Cererea a fost aprobată, celelalte cereri au fost respinse, iar nrLocuriOcupate a fost actualizat!",
-		});
-	} catch (err) {
-		console.error("Eroare la aprobarea cererii:", err);
-		res.status(500).json({ message: "Eroare internă la server!" });
-	}
+        // Aprobă cererea curentă
+        await Cerere.update(
+            {
+                statusPreliminar: "APROBATA",
+                dataRaspunsProfesor: new Date(),
+            },
+            {
+                where: { id: idCerere },
+            }
+        );
+        
+        // Respinge toate cererile IN_ASTEPTARE ale studentului curent
+        await Cerere.update(
+            {
+                statusPreliminar: "RESPINSA",
+                dataRaspunsProfesor: new Date(),
+                motivRespingere: "A fost aprobată altă cerere.",
+            },
+            {
+                where: {
+                    idStudent: idStudent,
+                    statusPreliminar: "IN_ASTEPTARE",
+                },
+            }
+        );
+
+        // Incrementează numărul de locuri ocupate
+        await Sesiune.update(
+            {
+                nrLocuriOcupate: nrLocuriOcupate + 1,
+            },
+            {
+                where: { id: idSesiune },
+            }
+        );
+
+        res.status(200).json({
+            message:
+                "Cererea a fost aprobată, iar numărul de locuri ocupate a fost actualizat!",
+        });
+    } catch (err) {
+        console.error("Eroare la aprobarea cererii:", err);
+        res.status(500).json({ message: "Eroare internă la server!" });
+    }
 });
 
 export default router;
