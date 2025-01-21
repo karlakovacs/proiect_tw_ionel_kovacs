@@ -11,24 +11,13 @@ body {
 	min-height: 100%;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
-    min-height: 100vh;
-}
-
 header {
 	background-color: #8ea6d1;
 	color: white;
 	padding: 20px;
 	text-align: center;
-	font-size: 1.8rem;
+	font-size: 15px;
 	border-bottom: 2px solid #002366;
-}
-
-.main-content {
-	flex: 1;
-	padding: 20px;
 }
 
 footer {
@@ -36,7 +25,7 @@ footer {
 	color: white;
 	text-align: center;
 	padding: 20px;
-	font-size: 1rem;
+	font-size: 15px;
 	border-top: 2px solid #8ea6d1;
 }
 
