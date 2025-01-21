@@ -25,6 +25,11 @@ header {
 	border-bottom: 2px solid #002366;
 }
 
+.main-content {
+	flex: 1;
+	padding: 20px;
+}
+
 footer {
 	background-color: #e4a3d4;
 	color: white;

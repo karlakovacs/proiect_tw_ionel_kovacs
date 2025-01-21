@@ -59,7 +59,7 @@ const Dashboard = () => {
 				</nav>
 			</header>
 
-			<main>
+			<main className="main-content">
 				<Outlet />
 			</main>
 
