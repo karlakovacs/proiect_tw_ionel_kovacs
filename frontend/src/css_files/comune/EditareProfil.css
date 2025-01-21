@@ -83,18 +83,18 @@
     background-color: #0048ba;
 }
 
-.EditareProfil .back-button {
+.EditareProfil button.inapoi {
     display: inline-flex;
     align-items: center;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: #002366;
+    color: #5e0231;
     font-size: 16px;
     margin-right: 10px;
 }
 
-.EditareProfil .back-button:hover {
+.EditareProfil button.inapoi:hover {
     color: #0048ba;
 }
 
