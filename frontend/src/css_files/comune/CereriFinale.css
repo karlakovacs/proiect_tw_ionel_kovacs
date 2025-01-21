@@ -12,9 +12,17 @@
     margin-top: 20px;
     background-color: #ffffff;
     border: 1px solid #ccc;
+    color: #002366; 
 }
 
-.CereriFinale th, .CereriFinale td {
+.CereriFinale th {
+    background-color: #e0e7ff;
+    color: #002366;
+    text-align: left;
+    padding: 12px;
+}
+
+.CereriFinale td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ccc;
@@ -32,4 +40,17 @@
     text-align: left;
     color: #002366;
     margin-bottom: 20px;
+}
+
+.CereriFinale button {
+    background-color: #002366;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.CereriFinale button:hover {
+    background-color: #0048ba;
 }
