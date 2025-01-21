@@ -65,6 +65,7 @@
 }
 
 .Auth button {
+  margin-top: 20px;
   background: none;
   border: none;
   color: #274c77;
@@ -102,20 +103,4 @@
 .Auth button[type="submit"]:disabled {
   background: #b1c5d9;
   cursor: not-allowed;
-}
-
-@media (max-width: 480px) {
-  .Auth {
-    padding: 20px;
-  }
-
-  .Auth h1 {
-    font-size: 1.6rem;
-  }
-
-  .Auth input,
-  .Auth button[type="submit"] {
-    width: 100%;
-    max-width: none;
-  }
 }
