@@ -80,11 +80,7 @@ const Sesiuni = () => {
 				}
 
 				const data = await response.json();
-				const sesiuneIds = sesiuni.map((sesiune) => sesiune.id);
-				const cereriFiltrate = data.filter((cerere) =>
-					sesiuneIds.includes(cerere.idSesiune)
-				);
-				setCereri(cereriFiltrate);
+				setCereri(data);
 			} catch (err) {
 				console.error("Eroare:", err);
 				setError(err.message);
