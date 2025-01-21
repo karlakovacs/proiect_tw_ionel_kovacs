@@ -1,0 +1,140 @@
+.CereriSesiuneCurenta {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.CereriSesiuneCurenta h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #002366;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.CereriSesiuneCurenta p {
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+}
+
+.CereriSesiuneCurenta p[style*="color: red"] {
+  color: red;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #00509e;
+  color: white;
+  font-weight: 600;
+}
+
+td {
+  background-color: #fff;
+  color: #333;
+}
+
+td img {
+  border-radius: 50%;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #002366;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #1d3557;
+}
+
+button:focus {
+  outline: none;
+}
+
+.respinsa {
+  background-color: #e57373;
+  color: white;
+}
+
+.in-asteptare {
+  background-color: #ffb74d;
+  color: white;
+}
+
+.aprobata {
+  background-color: #81c784;
+  color: white;
+}
+
+.respinsa td,
+.in-asteptare td,
+.aprobata td {
+  color: white;
+}
+
+button {
+  padding: 8px 15px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #00509e;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+
+td img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #00509e;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+}
+
+button:disabled {
+  background-color: #dcdcdc;
+}
