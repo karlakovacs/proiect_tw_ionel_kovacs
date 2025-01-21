@@ -75,8 +75,8 @@ const Semnatura = () => {
 				className="SignaturePad"
 			/>
 
-			<div>
-				<button onClick={() => navigate(-1)}>
+			<div className="butoane">
+				<button className="inapoi" onClick={() => navigate(-1)}>
 					<FaArrowLeft /> Înapoi
 				</button>
 				<button onClick={handleUndo}>
