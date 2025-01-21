@@ -1,4 +1,4 @@
-.Cerere-container {
+.Cerere {
     background-color: #f0f4fa;
     padding: 40px;
     border-radius: 10px;
@@ -7,7 +7,7 @@
     font-size: 1.2rem;
 }
 
-.Cerere-table {
+.Cerere table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -15,21 +15,21 @@
     border: 1px solid #ccc;
 }
 
-.Cerere-table th, .Cerere-table td {
+.Cerere th, .Cerere td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ccc;
 }
 
-.Cerere-table tr:nth-child(even) {
+.Cerere tr:nth-child(even) {
     background-color: #eef4ff;
 }
 
-.Cerere-table tr:hover {
+.Cerere tr:hover {
     background-color: #d7e3f3;
 }
 
-.Cerere-title {
+.Cerere h2 {
     text-align: left;
     color: #002366;
     margin-bottom: 20px;
