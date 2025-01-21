@@ -281,12 +281,12 @@ const EditareProfil = () => {
 				)}
 			</form>
 
-			<button onClick={() => navigate(-1)}>
-				<FaArrowLeft /> Înapoi
-			</button>
-
 			<button onClick={handleSalvare}>
 				<FaSave /> Salvează
+			</button>
+
+            <button className="inapoi" onClick={() => navigate(-1)}>
+				<FaArrowLeft /> Înapoi
 			</button>
 		</div>
 	);
