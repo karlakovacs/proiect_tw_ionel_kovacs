@@ -75,7 +75,10 @@ const CreareSesiune = () => {
 		}
 
 		try {
-            console.log(new Date(formData.dataInceput), new Date(formData.dataSfarsit));
+			console.log(
+				new Date(formData.dataInceput).setHours(0, 0, 0, 0),
+				new Date(formData.dataSfarsit).setHours(23, 59, 59, 999)
+			);
 
 			const response = await fetch(`${VITE_API_URL}/sesiuni/creare`, {
 				method: "POST",
