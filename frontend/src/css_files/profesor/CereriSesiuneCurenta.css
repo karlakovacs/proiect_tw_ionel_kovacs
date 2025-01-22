@@ -8,7 +8,7 @@
 	margin: 20px auto;
 }
 
-h2 {
+.CereriSesiuneCurenta h2 {
 	font-size: 24px;
 	font-weight: 600;
 	color: #002366;
@@ -16,31 +16,19 @@ h2 {
 	text-align: center;
 }
 
-p {
+.CereriSesiuneCurenta p {
 	font-size: 16px;
 	text-align: center;
 	color: #333;
 }
 
-p[style*="color: red"] {
-	color: red;
-}
-
-table {
+.CereriSesiuneCurenta table {
 	width: 100%;
 	border-collapse: collapse;
 	margin-top: 20px;
 }
 
-td img {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-right: 10px;
-}
-
-button {
+.CereriSesiuneCurenta button {
 	padding: 8px 16px;
 	border: none;
 	border-radius: 5px;
@@ -51,15 +39,15 @@ button {
 	transition: background-color 0.3s ease;
 }
 
-button:hover {
+.CereriSesiuneCurenta button:hover {
 	background-color: #1d3557;
 }
 
-button:focus {
+.CereriSesiuneCurenta button:focus {
 	outline: none;
 }
 
-button {
+.CereriSesiuneCurenta button {
 	padding: 8px 15px;
 	font-size: 14px;
 	color: #fff;
@@ -70,11 +58,6 @@ button {
 	border: none;
 }
 
-button:hover {
+.CereriSesiuneCurenta button:hover {
 	background-color: #003366;
-}
-
-button:disabled {
-	background-color: #b0bec5;
-	cursor: not-allowed;
 }

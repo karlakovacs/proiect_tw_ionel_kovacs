@@ -8,7 +8,7 @@
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.CreareSesiune h2 {
 	font-size: 28px;
 	font-weight: 600;
 	text-align: center;
@@ -16,20 +16,20 @@ h2 {
 	color: #003366;
 }
 
-form {
+.CreareSesiune form {
 	display: flex;
 	flex-direction: column;
 }
 
-label {
+.CreareSesiune label {
 	font-size: 16px;
 	font-weight: 500;
 	margin-bottom: 8px;
 	color: #333;
 }
 
-input,
-textarea {
+.CreareSesiune input,
+.CreareSesiune textarea {
 	padding: 10px;
 	font-size: 16px;
 	margin-bottom: 12px;
@@ -39,18 +39,18 @@ textarea {
 	transition: all 0.3s ease;
 }
 
-input:focus,
-textarea:focus {
+.CreareSesiune input:focus,
+.CreareSesiune textarea:focus {
 	border-color: #00509e;
 	box-shadow: 0 0 5px rgba(0, 80, 158, 0.3);
 }
 
-textarea {
+.CreareSesiune textarea {
 	resize: vertical;
 	min-height: 120px;
 }
 
-button {
+.CreareSesiune button {
 	padding: 12px 20px;
 	font-size: 16px;
 	color: white;
@@ -64,26 +64,11 @@ button {
 	transition: background-color 0.3s ease;
 }
 
-button:hover {
+.CreareSesiune button:hover {
 	background-color: #1d3557;
 }
 
-button:disabled {
+.CreareSesiune button:disabled {
 	background-color: #ccc;
 	cursor: not-allowed;
-}
-
-input:invalid,
-textarea:invalid {
-	border-color: #d32f2f;
-}
-
-input:valid,
-textarea:valid {
-	border-color: #388e3c;
-}
-
-input:invalid:focus,
-textarea:invalid:focus {
-	box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
 }

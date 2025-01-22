@@ -77,7 +77,7 @@ const CreareSesiune = () => {
 		try {
 			console.log(
 				new Date(formData.dataInceput).toISOString(),
-                new Date(formData.dataSfarsit).toISOString(),
+				new Date(formData.dataSfarsit).toISOString()
 			);
 
 			const response = await fetch(`${VITE_API_URL}/sesiuni/creare`, {
@@ -86,21 +86,22 @@ const CreareSesiune = () => {
 				body: JSON.stringify({
 					idProfesor: id,
 					dataInceput: new Date(formData.dataInceput).toISOString(),
-                    dataSfarsit: new Date(formData.dataSfarsit).toISOString(),
+					dataSfarsit: new Date(formData.dataSfarsit).toISOString(),
 					nrMaximLocuri: parseInt(formData.nrMaximLocuri, 10),
 					descriere: formData.descriere,
 				}),
 			});
 
 			if (!response.ok) {
-				throw new Error("Crearea sesiunii a eșuat!");
+				const errorData = await response.json();
+				throw new Error(
+					errorData.message || "Crearea sesiunii a eșuat!"
+				);
 			}
 
-			alert("Sesiunea a fost creată cu succes!");
 			navigate(`/profesor/${id}/sesiunile-mele`);
 		} catch (err) {
-			console.error("Eroare la crearea sesiunii:", err);
-			setEroare("Eroare la crearea sesiunii!");
+			setEroare(err.message);
 		}
 	};
 
