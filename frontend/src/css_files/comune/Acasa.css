@@ -1,0 +1,21 @@
+.Acasa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+}
+
+.Acasa h2 {
+    font-size: 2.5rem;
+    color: #4a90e2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.Acasa img {
+    max-width: 50%;
+    height: auto;
+}
