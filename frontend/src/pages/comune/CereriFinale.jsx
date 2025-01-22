@@ -1,6 +1,9 @@
 import '../../css_files/comune/CereriFinale.css';
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaCheck } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
+import { FaRegFilePdf, FaFilePdf } from "react-icons/fa";
 
 const VITE_API_URL = import.meta.env.VITE_API_URL;
 const VITE_SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
@@ -180,7 +183,7 @@ const CereriFinale = ({ idCerere }) => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										Vezi PDF
+										<FaRegFilePdf />
 									</a>
 								</td>
 								<td>
@@ -201,7 +204,7 @@ const CereriFinale = ({ idCerere }) => {
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											Vezi PDF
+											<FaFilePdf />
 										</a>
 									) : (
 										"Nu există"
@@ -226,18 +229,14 @@ const CereriFinale = ({ idCerere }) => {
 										cerere.statusFinal ===
 											"IN_ASTEPTARE" && (
 											<div>
-												<button
-													style={{
-														marginRight: "10px",
-													}}
-													onClick={() =>
+												<button onClick={() =>
 														handleRaspuns(
 															cerere.id,
 															"APROBATA"
 														)
 													}
 												>
-													Aprobați
+													<FaCheck />
 												</button>
 												<button
 													onClick={() =>
@@ -247,7 +246,7 @@ const CereriFinale = ({ idCerere }) => {
 														)
 													}
 												>
-													Respingeți
+													<FaXmark />
 												</button>
 											</div>
 										)}
