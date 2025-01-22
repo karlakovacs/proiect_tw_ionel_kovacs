@@ -2,6 +2,8 @@ import "../../css_files/comune/Cerere.css";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import CereriFinale from "./CereriFinale";
+import { FaCheck } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
 
 const VITE_API_URL = import.meta.env.VITE_API_URL;
 
@@ -182,12 +184,10 @@ const Cerere = () => {
 			{TIP === "PROFESOR" &&
 				cerere.statusPreliminar === "IN_ASTEPTARE" && (
 					<div>
-						<button onClick={handleAproba}>Aprobați</button>
+						<button onClick={handleAproba}><FaCheck /></button>
 						<button
-							onClick={handleRespinge}
-							style={{ marginLeft: "10px" }}
-						>
-							Respingeți
+							onClick={handleRespinge}>
+							<FaXmark />
 						</button>
 						<div style={{ marginTop: "10px" }}>
 							<textarea
