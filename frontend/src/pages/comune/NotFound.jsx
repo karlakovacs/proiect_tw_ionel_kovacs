@@ -8,6 +8,7 @@ const NotFound = () => {
 	return (
 		<div className="NotFound">
 			<img src={imagine404} alt="Imagine 404" width="50%" />
+            <br />
 			<button onClick={() => navigate("/")}>Înapoi</button>
 		</div>
 	);
