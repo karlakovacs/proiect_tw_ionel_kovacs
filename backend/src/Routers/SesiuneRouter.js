@@ -173,8 +173,7 @@ router.post('/sesiuni/filtrare/:id', async (req, res) => {
                         {
                             model: Utilizator,
                             as: 'utilizatori',
-                            where: { idFacultate },
-                            attributes: ['nume', 'prenume', 'urlImagineProfil'],
+                            attributes: ['nume', 'prenume', 'urlImagineProfil', 'idFacultate'],
                         },
                     ],
                     attributes: ['titluAcademic'],
@@ -202,17 +201,25 @@ router.post('/sesiuni/filtrare/:id', async (req, res) => {
             }
         };
 
-        const sesiuniProcesate = sesiuni.map((sesiune) => ({
-            id: sesiune.id,
-            idProfesor: sesiune.idProfesor,
-            imagineProfesor: sesiune.profesori.utilizatori.urlImagineProfil,
-            profesor: `${prescurtareTitlu(sesiune.profesori.titluAcademic)} ${sesiune.profesori.utilizatori.nume.toUpperCase()} ${sesiune.profesori.utilizatori.prenume}`,
-            dataInceput: sesiune.dataInceput,
-            dataSfarsit: sesiune.dataSfarsit,
-            nrMaximLocuri: sesiune.nrMaximLocuri,
-            nrLocuriOcupate: sesiune.nrLocuriOcupate,
-            descriere: sesiune.descriere,
-        }));
+        const sesiuniProcesate = sesiuni
+            .filter((sesiune) => {
+                const utilizator = sesiune.profesori?.utilizatori;
+                return utilizator && utilizator.idFacultate === parseInt(idFacultate, 10);
+            })
+            .map((sesiune) => {
+                const utilizator = sesiune.profesori.utilizatori;
+                return {
+                    id: sesiune.id,
+                    idProfesor: sesiune.idProfesor,
+                    imagineProfesor: utilizator.urlImagineProfil,
+                    profesor: `${prescurtareTitlu(sesiune.profesori.titluAcademic)} ${utilizator.nume.toUpperCase()} ${utilizator.prenume}`,
+                    dataInceput: sesiune.dataInceput,
+                    dataSfarsit: sesiune.dataSfarsit,
+                    nrMaximLocuri: sesiune.nrMaximLocuri,
+                    nrLocuriOcupate: sesiune.nrLocuriOcupate,
+                    descriere: sesiune.descriere,
+                };
+            });
 
         res.json(sesiuniProcesate);
     } catch (err) {
