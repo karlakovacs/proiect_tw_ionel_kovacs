@@ -1,51 +1,51 @@
 .CereriFinale {
-    background-color: #f9f9f9;
-    padding: 30px 40px;
-    border-radius: 15px;
-    margin: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	background-color: #f9f9f9;
+	padding: 30px 40px;
+	border-radius: 15px;
+	margin: 20px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .CereriFinale h2 {
-    text-align: left;
-    color: #002366;
-    margin-bottom: 20px;
-    font-size: 26px;
-    font-weight: 600;
+	text-align: left;
+	color: #002366;
+	margin-bottom: 20px;
+	font-size: 26px;
+	font-weight: 600;
 }
 
 .CereriFinale table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	border-collapse: collapse;
+	background-color: #ffffff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .CereriFinale th {
-    background-color: #e0e7ff;
-    color: #002366;
-    text-align: left;
-    padding: 15px 20px;
-    font-size: 16px;
+	background-color: #e0e7ff;
+	color: #002366;
+	text-align: left;
+	padding: 15px 20px;
+	font-size: 16px;
 }
 
 .CereriFinale td {
-    padding: 12px 20px;
-    text-align: left;
-    border: 1px solid #ccc;
-    font-size: 14px;
+	padding: 12px 20px;
+	text-align: left;
+	border: 1px solid #ccc;
+	font-size: 14px;
 }
 
 /* butoane */
 .CereriFinale .buton-aprobare {
 	color: #d4edda;
 	background-color: #155724;
-    margin-right: 10px;
+	margin-right: 10px;
 }
 
 .CereriFinale .buton-respingere {
-    color: #f8d7da;
+	color: #f8d7da;
 	background-color: #721c24;
 }

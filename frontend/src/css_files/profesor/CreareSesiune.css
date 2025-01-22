@@ -1,100 +1,89 @@
 .CreareSesiune {
-  width: 80%;
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 80%;
+	max-width: 600px;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-  font-size: 28px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #003366;
+	font-size: 28px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 20px;
+	color: #003366;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 label {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 8px;
-  color: #333;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 8px;
+	color: #333;
 }
 
 input,
 textarea {
-  padding: 10px;
-  font-size: 16px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
-  transition: all 0.3s ease;
+	padding: 10px;
+	font-size: 16px;
+	margin-bottom: 12px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	outline: none;
+	transition: all 0.3s ease;
 }
 
 input:focus,
 textarea:focus {
-  border-color: #00509e;
-  box-shadow: 0 0 5px rgba(0, 80, 158, 0.3);
+	border-color: #00509e;
+	box-shadow: 0 0 5px rgba(0, 80, 158, 0.3);
 }
 
 textarea {
-  resize: vertical;
-  min-height: 120px;
+	resize: vertical;
+	min-height: 120px;
 }
 
 button {
-  padding: 12px 20px;
-  font-size: 16px;
-  color: white;
-  background-color: #00509e;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
+	padding: 12px 20px;
+	font-size: 16px;
+	color: white;
+	background-color: #00509e;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #1d3557;
+	background-color: #1d3557;
 }
 
 button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-button svg {
-  margin-right: 8px;
-}
-
-p[style*="color: red"] {
-  color: #d32f2f;
-  font-size: 14px;
-  margin-top: -8px;
-  margin-bottom: 12px;
+	background-color: #ccc;
+	cursor: not-allowed;
 }
 
 input:invalid,
 textarea:invalid {
-  border-color: #d32f2f;
+	border-color: #d32f2f;
 }
 
 input:valid,
 textarea:valid {
-  border-color: #388e3c;
+	border-color: #388e3c;
 }
 
 input:invalid:focus,
 textarea:invalid:focus {
-  box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+	box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
 }

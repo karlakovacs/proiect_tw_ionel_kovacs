@@ -69,7 +69,7 @@ const SesiunileMele = () => {
 									key={sesiune.id}
 									style={{
 										backgroundColor: esteActiva
-											? "yellow"
+											? "#FDFD96"
 											: "transparent",
 									}}
 								>
