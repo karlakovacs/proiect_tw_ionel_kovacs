@@ -1,3 +1,18 @@
 .NotFound {
-    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.NotFound button {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 5px;
+	background-color: #002366;
+	color: white;
+	cursor: pointer;
+	font-size: 14px;
+	text-align: center;
+	transition: background-color 0.3s ease;
 }

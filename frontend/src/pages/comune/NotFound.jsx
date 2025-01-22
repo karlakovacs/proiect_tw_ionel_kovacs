@@ -1,13 +1,13 @@
 import "../../css_files/comune/NotFound.css";
 import { useNavigate } from "react-router-dom";
+import imagine404 from "../../assets/404.svg";
 
 const NotFound = () => {
 	const navigate = useNavigate();
 
 	return (
 		<div className="NotFound">
-			<h1>404 - Pagina nu a fost găsită</h1>
-			<p>Se pare că pagina căutată nu există.</p>
+			<img src={imagine404} alt="Imagine 404" width="50%" />
 			<button onClick={() => navigate("/")}>Înapoi</button>
 		</div>
 	);
