@@ -216,7 +216,7 @@ const Cerere = () => {
 			{cerere.statusPreliminar === "APROBATA" && (
 				<CereriFinale idCerere={idCerere} />
 			)}
-			<button onClick={() => navigate(-1)} style={{ marginTop: "10px" }}>
+			<button className="inapoi" onClick={() => navigate(-1)}>
 				Înapoi
 			</button>
 		</div>

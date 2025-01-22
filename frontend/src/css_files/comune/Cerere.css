@@ -37,7 +37,6 @@
 
 .Cerere button {
 	text-align: center;
-	background-color: #004262;
 	display: inline;
 }
 
@@ -51,4 +50,13 @@
 .Cerere .buton-respingere {
 	color: #f8d7da;
 	background-color: #721c24;
+}
+
+.Cerere .inapoi {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: #5e0231;
+	font-size: 16px;
+	margin-top: "10px";
 }
