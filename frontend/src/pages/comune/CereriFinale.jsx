@@ -204,7 +204,7 @@ const CereriFinale = ({ idCerere }) => {
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											<FaFilePdf color="#27AE60" />
+											<FaFilePdf color="#D2042D" />
 										</a>
 									) : (
 										"Nu există"
