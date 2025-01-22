@@ -130,12 +130,12 @@ const EditareProfil = () => {
 		const erori = {};
 
 		// Nume
-		if (!utilizator.nume.match(/^[a-zA-Z-]+$/)) {
+		if (!utilizator.nume.match(/^[a-zA-ZăâîșțĂÂÎȘȚ-]+$/)) {
 			erori.nume = "Numele poate conține doar litere și cratime (-).";
 		}
 
 		// Prenume
-		if (!utilizator.prenume.match(/^[a-zA-Z-\s]+$/)) {
+		if (!utilizator.prenume.match(/^[a-zA-ZăâîșțĂÂÎȘȚ-\s]+$/)) {
 			erori.prenume =
 				"Prenumele poate conține doar litere, spații și cratime (-).";
 		}

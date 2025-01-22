@@ -45,12 +45,12 @@ const Auth = () => {
 		const erori = {};
 
 		// Nume
-		if (!formData.nume.match(/^[a-zA-Z-]+$/)) {
+		if (!formData.nume.match(/^[a-zA-ZăâîșțĂÂÎȘȚ-]+$/)) {
 			erori.nume = "Numele poate conține doar litere și cratime (-).";
 		}
 
 		// Prenume
-		if (!formData.prenume.match(/^[a-zA-Z-\s]+$/)) {
+		if (!formData.prenume.match(/^[a-zA-ZăâîșțĂÂÎȘȚ-\s]+$/)) {
 			erori.prenume =
 				"Prenumele poate conține doar litere, spații și cratime (-).";
 		}

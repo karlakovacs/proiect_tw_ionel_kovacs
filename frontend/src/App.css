@@ -2,6 +2,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 header {
@@ -36,15 +37,4 @@ footer {
 .aprobata {
 	background-color: #d4edda;
 	color: #155724;
-}
-
-/* butoane */
-.buton-aprobare {
-	background-color: #d4edda;
-	color: #155724;
-}
-
-.buton-respingere {
-    background-color: #f8d7da;
-	color: #721c24;
 }

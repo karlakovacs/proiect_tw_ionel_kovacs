@@ -40,3 +40,15 @@
 	background-color: #004262;
     display: inline;
 }
+
+/* butoane */
+.Cerere .buton-aprobare {
+	color: #d4edda;
+	background-color: #155724;
+    margin-right: 10px;
+}
+
+.Cerere .buton-respingere {
+    color: #f8d7da;
+	background-color: #721c24;
+}
