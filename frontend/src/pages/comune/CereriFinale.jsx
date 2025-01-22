@@ -229,7 +229,7 @@ const CereriFinale = ({ idCerere }) => {
 										cerere.statusFinal ===
 											"IN_ASTEPTARE" && (
 											<div>
-												<button onClick={() =>
+												<button className="buton-aprobare" onClick={() =>
 														handleRaspuns(
 															cerere.id,
 															"APROBATA"
@@ -238,7 +238,7 @@ const CereriFinale = ({ idCerere }) => {
 												>
 													<FaCheck />
 												</button>
-												<button
+												<button className="buton-respingere"
 													onClick={() =>
 														handleRaspuns(
 															cerere.id,
