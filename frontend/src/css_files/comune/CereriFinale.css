@@ -38,7 +38,18 @@
 	font-size: 14px;
 }
 
-/* butoane */
+.CereriFinale button {
+	text-align: center;
+	display: inline;
+	border: none;
+	border-radius: 25%;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
 .CereriFinale .buton-aprobare {
 	color: #d4edda;
 	background-color: #155724;
