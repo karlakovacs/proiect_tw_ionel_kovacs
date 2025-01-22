@@ -1,4 +1,4 @@
-import '../../css_files/comune/CereriFinale.css';
+import "../../css_files/comune/CereriFinale.css";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
@@ -15,7 +15,7 @@ const CereriFinale = ({ idCerere }) => {
 	const [error, setError] = useState("");
 	const [titluFinal, setTitluFinal] = useState("");
 	const [eroareTitlu, setEroareTitlu] = useState("");
-    const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const fetchCereriFinale = async () => {
@@ -47,55 +47,55 @@ const CereriFinale = ({ idCerere }) => {
 	}
 
 	const handleRaspuns = async (idCerereFinala, statusNou) => {
-        try {
-            const response = await fetch(
-                `${VITE_API_URL}/cereri-finale/${idCerereFinala}`,
-                {
-                    method: "PUT",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        statusFinal: statusNou,
-                        dataRaspunsProfesor: new Date().toISOString(),
-                    }),
-                }
-            );
-    
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(
-                    errorData.message || "Eroare la actualizarea cererii!"
-                );
-            }
+		try {
+			const response = await fetch(
+				`${VITE_API_URL}/cereri-finale/${idCerereFinala}`,
+				{
+					method: "PUT",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						statusFinal: statusNou,
+						dataRaspunsProfesor: new Date().toISOString(),
+					}),
+				}
+			);
 
-            if (statusNou === "APROBATA") {
-                const semnareResponse = await fetch(
-                    `${VITE_API_URL}/cereri-finale/semnare/${idCerereFinala}`,
-                    {
-                        method: "POST",
-                    }
-                );
-    
-                if (!semnareResponse.ok) {
-                    const errorData = await semnareResponse.json();
-                    throw new Error(
-                        errorData.message || "Eroare la semnarea cererii!"
-                    );
-                }
-            }
-    
-            alert(
-                `Cererea a fost ${
-                    statusNou === "APROBATA" ? "aprobată" : "respinsă"
-                } cu succes!`
-            );
-            navigate(0);
-        } catch (err) {
-            console.error("Eroare:", err.message);
-            alert(`A apărut o eroare: ${err.message}`);
-        }
-    };    
+			if (!response.ok) {
+				const errorData = await response.json();
+				throw new Error(
+					errorData.message || "Eroare la actualizarea cererii!"
+				);
+			}
+
+			if (statusNou === "APROBATA") {
+				const semnareResponse = await fetch(
+					`${VITE_API_URL}/cereri-finale/semnare/${idCerereFinala}`,
+					{
+						method: "POST",
+					}
+				);
+
+				if (!semnareResponse.ok) {
+					const errorData = await semnareResponse.json();
+					throw new Error(
+						errorData.message || "Eroare la semnarea cererii!"
+					);
+				}
+			}
+
+			alert(
+				`Cererea a fost ${
+					statusNou === "APROBATA" ? "aprobată" : "respinsă"
+				} cu succes!`
+			);
+			navigate(0);
+		} catch (err) {
+			console.error("Eroare:", err.message);
+			alert(`A apărut o eroare: ${err.message}`);
+		}
+	};
 
 	const handleAdaugaCerere = async (titluFinal) => {
 		try {
@@ -107,7 +107,7 @@ const CereriFinale = ({ idCerere }) => {
 				body: JSON.stringify({
 					idCerere: idCerere,
 					titluFinal: titluFinal,
-                    urlCerereStudent: 'placeholder',
+					urlCerereStudent: "placeholder",
 				}),
 			});
 
@@ -154,7 +154,7 @@ const CereriFinale = ({ idCerere }) => {
 	};
 
 	return (
-		<div className='CereriFinale'>
+		<div className="CereriFinale">
 			<h2>Cereri finale</h2>
 
 			{cereriFinale.length === 0 ? (
@@ -229,7 +229,9 @@ const CereriFinale = ({ idCerere }) => {
 										cerere.statusFinal ===
 											"IN_ASTEPTARE" && (
 											<div>
-												<button className="buton-aprobare" onClick={() =>
+												<button
+													className="buton-aprobare"
+													onClick={() =>
 														handleRaspuns(
 															cerere.id,
 															"APROBATA"
@@ -238,7 +240,8 @@ const CereriFinale = ({ idCerere }) => {
 												>
 													<FaCheck />
 												</button>
-												<button className="buton-respingere"
+												<button
+													className="buton-respingere"
 													onClick={() =>
 														handleRaspuns(
 															cerere.id,

@@ -37,3 +37,14 @@ footer {
 	background-color: #d4edda;
 	color: #155724;
 }
+
+/* butoane */
+.buton-aprobare {
+	background-color: #d4edda;
+	color: #155724;
+}
+
+.buton-respingere {
+    background-color: #f8d7da;
+	color: #721c24;
+}

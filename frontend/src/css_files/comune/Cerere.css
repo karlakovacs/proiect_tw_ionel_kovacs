@@ -38,4 +38,5 @@
 .Cerere button {
 	text-align: center;
 	background-color: #004262;
+    display: inline;
 }
