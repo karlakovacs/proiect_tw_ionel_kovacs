@@ -165,9 +165,9 @@ const CereriFinale = ({ idCerere }) => {
 						<tr>
 							<th>Titlu final</th>
 							<th>Status final</th>
-							<th>Fișier PDF student</th>
+							<th>PDF student</th>
 							<th>Dată încărcare student</th>
-							<th>Fișier PDF profesor</th>
+							<th>PDF profesor</th>
 							<th>Dată răspuns profesor</th>
 							<th>Acțiuni</th>
 						</tr>
@@ -183,7 +183,7 @@ const CereriFinale = ({ idCerere }) => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<FaRegFilePdf />
+										<FaRegFilePdf color="#D2042D" />
 									</a>
 								</td>
 								<td>
@@ -204,7 +204,7 @@ const CereriFinale = ({ idCerere }) => {
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											<FaFilePdf />
+											<FaFilePdf color="#27AE60" />
 										</a>
 									) : (
 										"Nu există"
