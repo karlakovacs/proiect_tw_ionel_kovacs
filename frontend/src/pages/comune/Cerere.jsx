@@ -184,11 +184,8 @@ const Cerere = () => {
 			{TIP === "PROFESOR" &&
 				cerere.statusPreliminar === "IN_ASTEPTARE" && (
 					<div>
-						<button onClick={handleAproba}><FaCheck /></button>
-						<button
-							onClick={handleRespinge}>
-							<FaXmark />
-						</button>
+						<button className="buton-aprobare" onClick={handleAproba}><FaCheck /></button>
+						<button className="buton-respingere" onClick={handleRespinge}><FaXmark /></button>
 						<div style={{ marginTop: "10px" }}>
 							<textarea
 								placeholder="Introduceți motivul respingerii..."
