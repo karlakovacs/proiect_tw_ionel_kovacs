@@ -38,9 +38,14 @@
 .Cerere button {
 	text-align: center;
 	display: inline;
+	border: none;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
 }
 
-/* butoane */
 .Cerere .buton-aprobare {
 	color: #d4edda;
 	background-color: #155724;
@@ -58,5 +63,5 @@
 	cursor: pointer;
 	color: #5e0231;
 	font-size: 16px;
-	margin-top: "10px";
+	margin-top: 10px;
 }
